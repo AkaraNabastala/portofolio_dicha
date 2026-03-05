@@ -262,6 +262,7 @@ export const listEdukasi = [
 import cert1 from "/assets/sertifikat/cert1.jpg";
 import cert2 from "/assets/sertifikat/cert2.jpg";
 import cert3 from "/assets/sertifikat/cert3.jpg";
+import cert3 from "/assets/sertifikat/cert4.jpg";
 
 export const listSertifikat = [
   {
@@ -291,5 +292,14 @@ export const listSertifikat = [
     dad: "300",
     desk: "Sertifikat ini menandai keberhasilan dalam Tes Kompetensi Akademik (TKA) yang mencakup berbagai bidang pengetahuan umum dan kemampuan akademik."
   },
-
+  {
+    id: 4,
+    nama: "Webinar: Mengenal Solusi dan Teknologi Hybrid (PON + Ethernet)",
+    penerbit: "ID-Networkers Indonesia IT Expert Factory", // Silakan sesuaikan dengan penerbit sertifikatnya
+    gambar: cert4,
+    link: "https://drive.google.com/file/d/11jn_Yqb0rsHhEqTpixoGeg76pWVRp872/view?usp=sharing",
+    dad: "400",
+    desk: "Sertifikat ini diberikan atas pemahaman mengenai integrasi teknologi Passive Optical Network (PON) dengan Ethernet serta implementasi skenario penggunaannya dalam infrastruktur jaringan modern."
+  },
 ];
+

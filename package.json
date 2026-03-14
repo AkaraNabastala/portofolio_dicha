@@ -2,16 +2,15 @@
   "name": "portofolio",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://AkaraNabastala.github.io/porto_dicha",
+  "homepage": "https://akaranabastala.github.io/portofolio_dicha",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
+    "lint": "eslint .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "start": "react-scripts start"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",

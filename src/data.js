@@ -8,7 +8,7 @@ export default DataImage;
 import Tools1 from "/assets/tools/vscode.png";
 import Tools2 from "/assets/tools/reactjs.png";
 import Tools4 from "/assets/tools/tailwind.png";
-import Tools5 from "/assets/tools/bootstrap.png";
+// import Tools5 from "/assets/tools/bootstrap.png";
 import Tools6 from "/assets/tools/js.png";
 // import Tools7 from "/assets/tools/nodejs.png";
 import Tools8 from "/assets/tools/github.png";
@@ -18,7 +18,7 @@ import Tools12 from "/assets/tools/premierepro.png";
 import Tools13 from "/assets/tools/linux.png"; 
 import Tools14 from "/assets/tools/docker.png"; 
 import Tools15 from "/assets/tools/proxmox.png"; 
-import Tools15 from "/assets/tools/inno_setup.jpg"; 
+import Tools16 from "/assets/tools/innosetup.png";
 
 export const listTools = [
   {
@@ -45,14 +45,14 @@ export const listTools = [
     dad: "400",
     deskripsiLengkap: "Framework CSS *utility-first* favorit untuk styling yang cepat dan responsif. Memungkinkan saya membangun desain custom tanpa meninggalkan HTML, menghemat waktu yang signifikan dalam proses pengembangan.",
   },
-  {
-    id: 5,
-    gambar: Tools5,
-    nama: "Bootstrap",
-    ket: "Framework",
-    dad: "500",
-    deskripsiLengkap: "Digunakan untuk pengembangan prototipe cepat dan proyek yang memerlukan konsistensi desain yang teruji. Saya terbiasa memodifikasi komponen Bootstrap menggunakan Sass untuk branding kustom.",
-  },
+  // {
+  //   id: 5,
+  //   gambar: Tools5,
+  //   nama: "Bootstrap",
+  //   ket: "Framework",
+  //   dad: "500",
+  //   deskripsiLengkap: "Digunakan untuk pengembangan prototipe cepat dan proyek yang memerlukan konsistensi desain yang teruji. Saya terbiasa memodifikasi komponen Bootstrap menggunakan Sass untuk branding kustom.",
+  // },
   {
     id: 6,
     gambar: Tools6,
@@ -136,7 +136,8 @@ import Proyek2 from "/assets/proyek/proyek2.webp";
 import Proyek3 from "/assets/proyek/proyek3.webp";
 import Proyek4 from "/assets/proyek/proyek4.webp";
 import Proyek5 from "/assets/proyek/proyek5.webp";
-import Proyek5 from "/assets/proyek/sistem_absensi.png";
+import Proyek6 from "/assets/proyek/proyek6.png";
+import Proyek7 from "/assets/proyek/proyek7.png";
 
 export const listProyek = [
   {
@@ -195,16 +196,28 @@ export const listProyek = [
     link: "https://github.com/AkaraNabastala/landing_page_mikrotik",
   },
   {
-  id: 6, // Silakan sesuaikan ID-nya
-  gambar: Proyek6, // Pastikan Anda melakukan import gambar yang sesuai
-  nama: "Sistem Absensi Desktop", // Ubah jika ada nama spesifik/instansi
-  desk: "Aplikasi manajemen absensi berdesain modern yang didistribusikan sebagai installer Windows.",
-  deskLengkap: "Pengembangan sistem informasi absensi menggunakan React JS dan Tailwind CSS untuk menghasilkan antarmuka pengguna yang interaktif dan responsif. Aplikasi ini kemudian dipaketkan menjadi file pemasang tunggal (.exe) menggunakan Inno Setup, sehingga mempermudah pengguna akhir melakukan instalasi layaknya aplikasi desktop Windows (stand-alone) pada umumnya.",
-  tools: ["React JS", "Tailwind CSS", "Inno Setup"], // Tambahkan "Electron" atau "Tauri" jika Anda menggunakannya sebagai jembatan
-  dad: "600", // Sesuaikan delay animasinya
-  kategori: "Desktop Application", // Karena hasil akhirnya berupa installer Inno Setup
-  link: "https://drive.google.com/file/d/1Ws4U5qnfQfsJ0jt95GzD0TKDzm5JJ1ys/view?usp=sharing", // Ganti dengan link repository atau demo yang sesuai
-},
+    id: 6, // Silakan sesuaikan ID-nya
+    gambar: Proyek6, // Pastikan Anda melakukan import gambar yang sesuai
+    nama: "Sistem Absensi Desktop", // Ubah jika ada nama spesifik/instansi
+    desk: "Aplikasi manajemen absensi berdesain modern yang didistribusikan sebagai installer Windows.",
+    deskLengkap: "Pengembangan sistem informasi absensi menggunakan React JS dan Tailwind CSS untuk menghasilkan antarmuka pengguna yang interaktif dan responsif. Aplikasi ini kemudian dipaketkan menjadi file pemasang tunggal (.exe) menggunakan Inno Setup, sehingga mempermudah pengguna akhir melakukan instalasi layaknya aplikasi desktop Windows (stand-alone) pada umumnya.",
+    tools: ["React JS", "Tailwind CSS", "Inno Setup"], // Tambahkan "Electron" atau "Tauri" jika Anda menggunakannya sebagai jembatan
+    dad: "600", // Sesuaikan delay animasinya
+    kategori: "Desktop Application", // Karena hasil akhirnya berupa installer Inno Setup
+    link: "https://drive.google.com/file/d/1Ws4U5qnfQfsJ0jt95GzD0TKDzm5JJ1ys/view?usp=sharing", // Ganti dengan link repository atau demo yang sesuai
+  },
+  {
+    id: 7,
+    gambar: Proyek7,
+    nama: "Smart Computer Based Test (CBT)",
+    desk: "Platform ujian digital berbasis web untuk institusi pendidikan dari tingkat SD hingga Universitas dengan dukungan penilaian otomatis berbasis AI.",
+    deskLengkap: "Smart Computer Based Test (CBT) merupakan sistem ujian berbasis web yang dirancang untuk digunakan oleh berbagai institusi pendidikan mulai dari Sekolah Dasar (SD), Sekolah Menengah (SMP/SMA), hingga Perguruan Tinggi. Sistem ini memungkinkan pelaksanaan ujian secara digital dengan pengelolaan soal, manajemen peserta, pengaturan waktu ujian, serta penilaian otomatis. Salah satu fitur utama yang sedang dikembangkan adalah integrasi Artificial Intelligence (AI) untuk membantu proses pencocokan dan evaluasi jawaban esai secara lebih cepat dan objektif. Ke depan, sistem CBT ini direncanakan akan terintegrasi dengan platform SI-MAS (Sistem Management Sekolah), yaitu sistem manajemen sekolah yang sedang dirancang untuk mengelola berbagai kebutuhan administrasi pendidikan secara terpusat seperti data siswa, akademik, penilaian, serta manajemen kegiatan sekolah.",
+    tools: ["React JS", "Tailwind CSS", "Node.js", "PostgreSQL", "AI API"],
+    dad: "700",
+    kategori: "Web Development",
+    link: "#",
+    status: "On Progress"
+  },
 ];
 
 import LogoSD from "/assets/edu/logo_sd.png"; 
@@ -262,7 +275,8 @@ export const listEdukasi = [
 import cert1 from "/assets/sertifikat/cert1.jpg";
 import cert2 from "/assets/sertifikat/cert2.jpg";
 import cert3 from "/assets/sertifikat/cert3.jpg";
-import cert3 from "/assets/sertifikat/cert4.jpg";
+import cert4 from "/assets/sertifikat/cert4.jpg";
+import cert5 from "/assets/sertifikat/cert5.jpg";
 
 export const listSertifikat = [
   {
@@ -294,12 +308,21 @@ export const listSertifikat = [
   },
   {
     id: 4,
-    nama: "Webinar: Mengenal Solusi dan Teknologi Hybrid (PON + Ethernet)",
+    nama: "Mengenal Solusi dan Teknologi Hybrid (PON + Ethernet)",
     penerbit: "ID-Networkers Indonesia IT Expert Factory", // Silakan sesuaikan dengan penerbit sertifikatnya
     gambar: cert4,
     link: "https://drive.google.com/file/d/11jn_Yqb0rsHhEqTpixoGeg76pWVRp872/view?usp=sharing",
     dad: "400",
     desk: "Sertifikat ini diberikan atas pemahaman mengenai integrasi teknologi Passive Optical Network (PON) dengan Ethernet serta implementasi skenario penggunaannya dalam infrastruktur jaringan modern."
   },
+  {
+    id: 5,
+    nama: "IoT Engineer Profesi Bidang IT Yang Strategis Di Era Digital",
+    penerbit: "Webinar Nasional TIK",
+    gambar: cert5, 
+    link: "https://drive.google.com/file/d/1TKLqA83RqbdW6Dftvqhnbt1TM2mJemnw/view?usp=sharing",
+    dad: "500",
+    desk: "Sertifikat ini diberikan atas partisipasi dalam kegiatan Webinar Nasional TIK dengan tema 'IoT Engineer Profesi Bidang IT Yang Strategis Di Era Digital'. Kegiatan dilaksanakan secara daring melalui Zoom pada tanggal 10 Maret 2026 dengan total 2 Jam Pelajaran (JP). Materi yang dipelajari meliputi pengantar Internet of Things (IoT), arsitektur IoT, komponen utama dalam sistem IoT, serta contoh implementasi IoT dalam berbagai bidang teknologi."
+  }
 ];
 

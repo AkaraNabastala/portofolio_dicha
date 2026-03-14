@@ -5,6 +5,7 @@ import CVModal from "./components/CVModal";
 import ToolModal from "./components/ToolModal";
 import ProyekModal from "./components/ProyekModal";
 import CertModal from "./components/CertModal";
+import PasswordModal from "./components/PasswordModal";
 
 const CV_PREVIEW_URL = "assets/cv_dicha.pdf#toolbar=0&navpanes=0&scrollbar=0"; 
 const CV_DOWNLOAD_URL = "assets/cv_dicha.pdf";
@@ -27,6 +28,7 @@ const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', '
     const [selectedProyek, setSelectedProyek] = useState(null);
     const [isCertModalOpen, setIsCertModalOpen] = useState(false);
     const [selectedCert, setSelectedCert] = useState(null);
+    const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
 
     const openProyekModal = (proyek) => {
         setSelectedProyek(proyek);
@@ -39,9 +41,15 @@ const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', '
     };
 
     const openModal = (e) => {
-        e.preventDefault(); 
-        setIsModalOpen(true);
+      e.preventDefault();
+      setIsPasswordModalOpen(true);
     };
+
+    const handlePasswordSuccess = () => {
+      setIsPasswordModalOpen(false);
+      setIsModalOpen(true);
+    };
+
     const openCertModal = (cert) => {   
         setSelectedCert(cert);
         setIsCertModalOpen(true);
@@ -125,7 +133,7 @@ const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', '
 
             <div className="grid grid-cols-2 gap-8 pt-6 border-t border-zinc-700">
               <div>
-                <h3 className="text-4xl lg:text-5xl font-bold text-violet-500">45+</h3>
+                <h3 className="text-4xl lg:text-5xl font-bold text-violet-500">5+</h3>
                 <p className="text-zinc-400 text-lg">Proyek Selesai</p>
               </div>
               <div>
@@ -205,9 +213,18 @@ const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', '
                   </div>
 
                   <div className="p-6">
-                    <h2 className="text-xl font-bold mb-1">{proyek.nama}</h2>
+                    <div className="flex items-center justify-between mb-1">
+                    <h2 className="text-xl font-bold">{proyek.nama}</h2>
+
+                    {proyek.status && (
+                      <span className="text-[10px] px-2 py-1 rounded bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">
+                        {proyek.status}
+                      </span>
+                    )}
+                    </div>
+
                     <span className="text-xs font-medium text-violet-400 bg-violet-900/40 px-2 py-0.5 rounded mb-3 inline-block">
-                        {proyek.kategori}
+                    {proyek.kategori}
                     </span>
                     <p className="text-zinc-400 text-sm line-clamp-2 mb-4">
                       {proyek.desk}
@@ -372,6 +389,11 @@ const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', '
         isVisible={isCertModalOpen}
         onClose={() => setIsCertModalOpen(false)}
         cert={selectedCert}
+      />
+      <PasswordModal
+        isVisible={isPasswordModalOpen}
+        onClose={() => setIsPasswordModalOpen(false)}
+        onSuccess={handlePasswordSuccess}
       />
     </main>
   );

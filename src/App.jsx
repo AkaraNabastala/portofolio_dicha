@@ -7,8 +7,7 @@ import ProyekModal from "./components/ProyekModal";
 import CertModal from "./components/CertModal";
 import PasswordModal from "./components/PasswordModal";
 
-const CV_PREVIEW_URL = "assets/cv_dicha.pdf#toolbar=0&navpanes=0&scrollbar=0"; 
-const CV_DOWNLOAD_URL = "assets/cv_dicha.pdf";
+const GOOGLE_DRIVE_CV_URL = "https://drive.google.com/file/d/1XRYCfrtgNq6ZC_OFtKkKGPWP_iAkJAW6/view?usp=drive_link";
 
 const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', 'Infrastruktur/Sistem']; 
 // function App() {
@@ -47,7 +46,7 @@ const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', '
 
     const handlePasswordSuccess = () => {
       setIsPasswordModalOpen(false);
-      setIsModalOpen(true);
+      window.open(GOOGLE_DRIVE_CV_URL, '_blank'); // Langsung buka CV di Google Drive
     };
 
     const openCertModal = (cert) => {   
@@ -80,13 +79,13 @@ const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', '
               holistik tentang teknologi dan proses bisnis. Sudah saya tekuni lebih dari 4 tahun.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <a
-                href="https://drive.google.com/file/d/1f5ecykpsxoVj8y4uyQrN3ewW60w6oEAF/view?usp=sharing" 
+              <button
                 onClick={openModal} 
                 className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 px-7 py-3 rounded-full font-medium transition shadow-lg shadow-violet-800/50"
               >
                 Lihat CV <i className="ri-eye-line text-lg"></i>
-              </a>
+              </button>
+
               <a
                 href="#proyek"
                 className="inline-flex items-center gap-2 bg-zinc-700 hover:bg-zinc-600 px-7 py-3 rounded-full font-medium transition"
@@ -372,8 +371,8 @@ const categories = ['Semua', 'Web Development', 'Desain Visual', 'Multimedia', '
       <CVModal 
         isVisible={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
-        cvUrl={CV_PREVIEW_URL}
-        downloadUrl={CV_DOWNLOAD_URL}
+        cvUrl={GOOGLE_DRIVE_CV_URL} // Gunakan link Drive
+        downloadUrl={GOOGLE_DRIVE_CV_URL} // Gunakan link Drive
       />
       <ToolModal 
         isVisible={isToolModalOpen}

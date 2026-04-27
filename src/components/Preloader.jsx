@@ -30,7 +30,7 @@
                             className="text-7xl font-extrabold text-white animate-pulse" 
                             style={{ animationDuration: '1.5s' }}
                         >
-                            <span className="text-violet-500">Dic</span>ha.
+                            <span className="text-violet-500">Nabas</span>tala.
                         </h1>
                         <div className="mt-6">
                             <svg className="animate-spin h-5 w-5 text-violet-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
